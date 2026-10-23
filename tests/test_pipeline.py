@@ -38,6 +38,7 @@ def test_render_writes_chapters_and_sync_map(tmp_path):
     assert [c["title"] for c in book["chapters"]][:3] == ["Tiny Models Learn Fast", "Abstract", "Section 1. Introduction"]
     for chapter in book["chapters"]:
         assert (tmp_path / chapter["file"]).exists()
+    assert (tmp_path / Path(book["source_pdf"]).name).exists()  # the player opens the PDF next to book.json
 
     on_disk = json.loads((tmp_path / "book.json").read_text())
     segments = on_disk["segments"]

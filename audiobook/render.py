@@ -5,6 +5,7 @@ Output folder:
     book.json                                  chapters, and every segment and sentence with its
                                                start/end time and where it sits on the page
     script.json                                the narration script that was performed
+    <name>.pdf                                 a copy of the source PDF, so a player can open it
 """
 
 from __future__ import annotations
@@ -48,6 +49,9 @@ def split_chapters(script: Script) -> list[Chapter]:
 def render(doc: Document, script: Script, voice: VoiceEngine, out_dir: Path, audio_format: str = "mp3",
            log=sys.stderr) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
+    pdf_copy = out_dir / Path(doc.path).name
+    if Path(doc.path).resolve() != pdf_copy.resolve():
+        shutil.copyfile(doc.path, pdf_copy)
     cache = out_dir / ".cache"
     cache.mkdir(exist_ok=True)
     if audio_format != "wav" and not shutil.which("ffmpeg"):
