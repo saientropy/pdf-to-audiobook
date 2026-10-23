@@ -21,9 +21,24 @@ PDF ──► extract ──► narrator (Claude + page images) ──► voice 
 python -m venv .venv && . .venv/bin/activate
 pip install -e ".[dev]"
 
-export ANTHROPIC_API_KEY=...          # the narrator brain
+audiobook login                       # sign in to Claude in the browser (OAuth), once
 audiobook make paper.pdf -o out/      # Explain mode, local Kokoro voice
 ```
+
+### Sign-in
+
+`audiobook login` uses the Anthropic CLI (`ant auth login`) to sign in with OAuth. No API key
+is stored. The Anthropic SDK reads the profile from `~/.config/anthropic/` and refreshes the token.
+Install the CLI first with `brew install anthropics/tap/ant`, or download it from
+[the releases page](https://github.com/anthropics/anthropic-cli/releases).
+
+- `audiobook whoami` shows how the narrator signs in.
+- `audiobook login --no-browser` works on a machine without a browser.
+- If there is no OAuth profile, the narrator uses `ANTHROPIC_API_KEY` from the environment.
+
+This is a Claude Platform (console.anthropic.com) sign-in, and that account's workspace pays
+for usage. A claude.ai Pro or Max subscription does not cover it: unless Anthropic approves it,
+third-party apps may not use claude.ai login.
 
 The first run downloads the Kokoro voice model (about 120 MB) to `~/.cache/pdf-to-audiobook`.
 `out/` then contains one MP3 per chapter, `script.json` (what the narrator says) and `book.json`

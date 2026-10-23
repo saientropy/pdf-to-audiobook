@@ -14,6 +14,7 @@ from typing import Literal
 import anthropic
 from pydantic import BaseModel, Field
 
+from ..auth import make_client
 from ..extract import render_page_png
 from ..model import Block, BlockKind, Document, Mode, Script, Segment, SegmentKind
 from ..speech_text import clean_prose
@@ -114,7 +115,7 @@ class ClaudeNarrator:
         self.pages_per_call = pages_per_call
         self.effort = effort
         self.dpi = dpi
-        self.client = client or anthropic.Anthropic()
+        self.client = client or make_client()
         self.log = log
 
     def narrate(self, doc: Document, mode: Mode = Mode.EXPLAIN) -> Script:

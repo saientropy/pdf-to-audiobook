@@ -5,6 +5,7 @@
     audiobook script paper.pdf -o script.json              # write the narration script only
     audiobook voice script.json paper.pdf -o out/          # perform an existing (maybe hand-edited) script
     audiobook extract paper.pdf                            # show what the parser found
+    audiobook login                                        # sign in to Claude with OAuth (browser)
 """
 
 from __future__ import annotations
@@ -14,6 +15,7 @@ import json
 import sys
 from pathlib import Path
 
+from . import auth
 from .extract import extract
 from .model import Mode, Script
 from .narrators import get_narrator
@@ -24,6 +26,12 @@ from .voices import get_voice
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="audiobook", description="Turn a PDF into a narrated audiobook.")
     sub = parser.add_subparsers(dest="command", required=True)
+
+    p_login = sub.add_parser("login", help="sign in to Claude with OAuth (uses the Anthropic CLI)")
+    p_login.add_argument("--no-browser", action="store_true", help="print a URL and paste the code back")
+    p_login.add_argument("--profile", help="profile name, if you use more than one")
+    sub.add_parser("logout", help="sign out of the active OAuth profile")
+    sub.add_parser("whoami", help="show how the narrator signs in to Claude")
 
     p_extract = sub.add_parser("extract", help="print the blocks found in a PDF")
     p_extract.add_argument("pdf", type=Path)
@@ -47,6 +55,16 @@ def main(argv: list[str] | None = None) -> int:
     _voice_args(p_make)
 
     args = parser.parse_args(argv)
+    if args.command == "login":
+        code = auth.login(no_browser=args.no_browser, profile=args.profile)
+        print(auth.status_text())
+        return code
+    if args.command == "logout":
+        return auth.logout()
+    if args.command == "whoami":
+        print(auth.status_text())
+        return 0
+
     doc = extract(args.pdf)
 
     if args.command == "extract":
