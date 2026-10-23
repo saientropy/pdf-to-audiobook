@@ -1,0 +1,870 @@
+{
+  "title": "Tiny Models Learn Fast",
+  "mode": "explain",
+  "voice": "kokoro",
+  "source_pdf": "samples/sample-paper.pdf",
+  "page_sizes": [
+    [
+      612.0,
+      792.0
+    ],
+    [
+      612.0,
+      792.0
+    ]
+  ],
+  "chapters": [
+    {
+      "title": "Tiny Models Learn Fast",
+      "file": "01-tiny-models-learn-fast.mp3",
+      "start": 0.0,
+      "duration": 6.321
+    },
+    {
+      "title": "Abstract",
+      "file": "02-abstract.mp3",
+      "start": 6.321,
+      "duration": 13.384
+    },
+    {
+      "title": "Section one. Introduction",
+      "file": "03-section-one-introduction.mp3",
+      "start": 19.705,
+      "duration": 23.692
+    },
+    {
+      "title": "Section two. Method",
+      "file": "04-section-two-method.mp3",
+      "start": 43.397,
+      "duration": 71.068
+    },
+    {
+      "title": "Section three. Results",
+      "file": "05-section-three-results.mp3",
+      "start": 114.465,
+      "duration": 65.007
+    },
+    {
+      "title": "Section four. Conclusion",
+      "file": "06-section-four-conclusion.mp3",
+      "start": 179.472,
+      "duration": 15.063
+    }
+  ],
+  "segments": [
+    {
+      "id": 0,
+      "kind": "heading",
+      "text": "Tiny Models Learn Fast.",
+      "style": "title",
+      "source": [
+        "p1-b1"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            202.9,
+            72.0,
+            409.1,
+            99.7
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Tiny Models Learn Fast.",
+          "start": 0.0,
+          "end": 1.579
+        }
+      ],
+      "chapter": 0,
+      "start": 0.0,
+      "end": 2.459
+    },
+    {
+      "id": 1,
+      "kind": "read",
+      "text": "By A. Researcher and B. Scientist.",
+      "style": "",
+      "source": [
+        "p1-b2"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            238.8,
+            110.5,
+            373.2,
+            125.2
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "By A.",
+          "start": 2.459,
+          "end": 3.248
+        },
+        {
+          "text": "Researcher and B.",
+          "start": 3.428,
+          "end": 4.623
+        },
+        {
+          "text": "Scientist.",
+          "start": 4.803,
+          "end": 5.741
+        }
+      ],
+      "chapter": 0,
+      "start": 2.459,
+      "end": 6.321
+    },
+    {
+      "id": 2,
+      "kind": "heading",
+      "text": "Abstract.",
+      "style": "",
+      "source": [
+        "p1-b3"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            72.0,
+            142.3,
+            116.7,
+            158.9
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Abstract.",
+          "start": 6.321,
+          "end": 7.217
+        }
+      ],
+      "chapter": 1,
+      "start": 6.321,
+      "end": 8.097
+    },
+    {
+      "id": 3,
+      "kind": "read",
+      "text": "We show that a very small neural network can learn a toy task in a handful of epochs. We describe the model, the loss we minimise, and a comparison against two baselines.",
+      "style": "",
+      "source": [
+        "p1-b4"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            72.0,
+            165.0,
+            533.6,
+            193.8
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "We show that a very small neural network can learn a toy task in a handful of epochs.",
+          "start": 8.097,
+          "end": 13.217
+        },
+        {
+          "text": "We describe the model, the loss we minimise, and a comparison against two baselines.",
+          "start": 13.397,
+          "end": 18.325
+        }
+      ],
+      "chapter": 1,
+      "start": 8.097,
+      "end": 18.905
+    },
+    {
+      "id": 4,
+      "kind": "pause",
+      "text": "",
+      "style": "",
+      "source": [],
+      "anchors": [],
+      "sentences": [],
+      "chapter": 1,
+      "start": 18.905,
+      "end": 19.705
+    },
+    {
+      "id": 5,
+      "kind": "heading",
+      "text": "Section one. Introduction.",
+      "style": "",
+      "source": [
+        "p1-b5"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            72.0,
+            204.0,
+            155.8,
+            222.0
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Section one. Introduction.",
+          "start": 19.705,
+          "end": 21.455
+        }
+      ],
+      "chapter": 2,
+      "start": 19.705,
+      "end": 22.335
+    },
+    {
+      "id": 6,
+      "kind": "read",
+      "text": "Large models dominate recent work, but small models remain useful on devices with little memory. Prior studies of compact networks focus on image tasks; we study a simple sequence task instead.",
+      "style": "",
+      "source": [
+        "p1-b6"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            72.0,
+            230.4,
+            530.2,
+            273.9
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Large models dominate recent work, but small models remain useful on devices with little memory.",
+          "start": 22.335,
+          "end": 28.351
+        },
+        {
+          "text": "Prior studies of compact networks focus on image tasks; we study a simple sequence task instead.",
+          "start": 28.531,
+          "end": 34.739
+        }
+      ],
+      "chapter": 2,
+      "start": 22.335,
+      "end": 35.319
+    },
+    {
+      "id": 7,
+      "kind": "aside",
+      "text": "There's a footnote here, and it's just a practical note: the code and data are available from the authors on request.",
+      "style": "quiet aside",
+      "source": [
+        "p1-b11"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            72.0,
+            714.1,
+            245.3,
+            724.1
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "There's a footnote here, and it's just a practical note: the code and data are available from the authors on request.",
+          "start": 35.319,
+          "end": 42.017
+        }
+      ],
+      "chapter": 2,
+      "start": 35.319,
+      "end": 42.597
+    },
+    {
+      "id": 8,
+      "kind": "pause",
+      "text": "",
+      "style": "",
+      "source": [],
+      "anchors": [],
+      "sentences": [],
+      "chapter": 2,
+      "start": 42.597,
+      "end": 43.397
+    },
+    {
+      "id": 9,
+      "kind": "heading",
+      "text": "Section two. Method.",
+      "style": "",
+      "source": [
+        "p1-b7"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            72.0,
+            283.4,
+            128.3,
+            301.4
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Section two. Method.",
+          "start": 43.397,
+          "end": 45.019
+        }
+      ],
+      "chapter": 3,
+      "start": 43.397,
+      "end": 45.899
+    },
+    {
+      "id": 10,
+      "kind": "read",
+      "text": "Given inputs x sub i with labels y sub i, the model predicts y hat sub i, and is trained to minimise the cross-entropy loss:",
+      "style": "",
+      "source": [
+        "p1-b8"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            72.0,
+            309.8,
+            504.0,
+            333.4
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Given inputs x sub i with labels y sub i, the model predicts y hat sub i, and is trained to minimise the cross-entropy loss:",
+          "start": 45.899,
+          "end": 54.389
+        }
+      ],
+      "chapter": 3,
+      "start": 45.899,
+      "end": 54.969
+    },
+    {
+      "id": 11,
+      "kind": "read",
+      "text": "L of theta equals minus one over N, times the sum over i of y sub i, times the log of y hat sub i.",
+      "style": "slower, clear",
+      "source": [
+        "p1-b9"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            215.0,
+            344.7,
+            396.7,
+            357.5
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "L of theta equals minus one over N, times the sum over i of y sub i, times the log of y hat sub i.",
+          "start": 54.969,
+          "end": 63.161
+        }
+      ],
+      "chapter": 3,
+      "start": 54.969,
+      "end": 63.741
+    },
+    {
+      "id": 12,
+      "kind": "aside",
+      "text": "Let's unpack that. Theta is everything the model can learn, its weights. For each training example, y is the true answer and y hat is the probability the model gave it. Taking the log of that probability and flipping the sign means the loss is small when the model is confident and right, and grows sharply when it's confidently wrong. Dividing by N just averages this over all the examples. So minimising L simply means: push the model to put high probability on the correct answers.",
+      "style": "warm, explanatory",
+      "source": [
+        "p1-b9"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            215.0,
+            344.7,
+            396.7,
+            357.5
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Let's unpack that.",
+          "start": 63.741,
+          "end": 64.957
+        },
+        {
+          "text": "Theta is everything the model can learn, its weights.",
+          "start": 65.137,
+          "end": 67.975
+        },
+        {
+          "text": "For each training example, y is the true answer and y hat is the probability the model gave it.",
+          "start": 68.155,
+          "end": 74.085
+        },
+        {
+          "text": "Taking the log of that probability and flipping the sign means the loss is small when the model is confident and right, and grows sharply when it's confidently wrong.",
+          "start": 74.265,
+          "end": 84.057
+        },
+        {
+          "text": "Dividing by N just averages this over all the examples.",
+          "start": 84.237,
+          "end": 88.099
+        },
+        {
+          "text": "So minimising L simply means: push the model to put high probability on the correct answers.",
+          "start": 88.279,
+          "end": 93.868
+        }
+      ],
+      "chapter": 3,
+      "start": 63.741,
+      "end": 94.448
+    },
+    {
+      "id": 13,
+      "kind": "read",
+      "text": "Here theta are the model parameters, and N is the number of training examples. Equation one is minimised with stochastic gradient descent.",
+      "style": "",
+      "source": [
+        "p1-b10"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            72.0,
+            368.1,
+            530.2,
+            391.7
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Here theta are the model parameters, and N is the number of training examples.",
+          "start": 94.448,
+          "end": 99.013
+        },
+        {
+          "text": "Equation one is minimised with stochastic gradient descent.",
+          "start": 99.193,
+          "end": 102.692
+        }
+      ],
+      "chapter": 3,
+      "start": 94.448,
+      "end": 103.272
+    },
+    {
+      "id": 14,
+      "kind": "aside",
+      "text": "Stochastic gradient descent means nudging the weights a little at a time, using small random batches of examples, in whichever direction makes the loss go down.",
+      "style": "quiet aside",
+      "source": [
+        "p1-b10"
+      ],
+      "anchors": [
+        {
+          "page": 0,
+          "bbox": [
+            72.0,
+            368.1,
+            530.2,
+            391.7
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Stochastic gradient descent means nudging the weights a little at a time, using small random batches of examples, in whichever direction makes the loss go down.",
+          "start": 103.272,
+          "end": 113.085
+        }
+      ],
+      "chapter": 3,
+      "start": 103.272,
+      "end": 113.665
+    },
+    {
+      "id": 15,
+      "kind": "pause",
+      "text": "",
+      "style": "",
+      "source": [],
+      "anchors": [],
+      "sentences": [],
+      "chapter": 3,
+      "start": 113.665,
+      "end": 114.465
+    },
+    {
+      "id": 16,
+      "kind": "heading",
+      "text": "Section three. Results.",
+      "style": "",
+      "source": [
+        "p2-b1"
+      ],
+      "anchors": [
+        {
+          "page": 1,
+          "bbox": [
+            72.0,
+            72.0,
+            125.4,
+            90.0
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Section three. Results.",
+          "start": 114.465,
+          "end": 116.065
+        }
+      ],
+      "chapter": 4,
+      "start": 114.465,
+      "end": 116.945
+    },
+    {
+      "id": 17,
+      "kind": "read",
+      "text": "Figure 1 shows the training loss. Table 1 compares our model against two baselines.",
+      "style": "",
+      "source": [
+        "p2-b2"
+      ],
+      "anchors": [
+        {
+          "page": 1,
+          "bbox": [
+            72.0,
+            98.4,
+            425.8,
+            112.4
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Figure 1 shows the training loss.",
+          "start": 116.945,
+          "end": 118.929
+        },
+        {
+          "text": "Table 1 compares our model against two baselines.",
+          "start": 119.109,
+          "end": 122.203
+        }
+      ],
+      "chapter": 4,
+      "start": 116.945,
+      "end": 122.783
+    },
+    {
+      "id": 18,
+      "kind": "aside",
+      "text": "In Figure 1, the loss is on the vertical axis and training epochs run left to right. The curve drops steeply over the first few epochs, then levels off into a near-flat line. In other words, the model learns almost everything it's going to learn very early, which is the paper's headline claim.",
+      "style": "curious, descriptive",
+      "source": [
+        "p2-b3"
+      ],
+      "anchors": [
+        {
+          "page": 1,
+          "bbox": [
+            102.9,
+            133.4,
+            509.1,
+            319.8
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "In Figure 1, the loss is on the vertical axis and training epochs run left to right.",
+          "start": 122.783,
+          "end": 127.86
+        },
+        {
+          "text": "The curve drops steeply over the first few epochs, then levels off into a near-flat line.",
+          "start": 128.04,
+          "end": 133.117
+        },
+        {
+          "text": "In other words, the model learns almost everything it's going to learn very early, which is the paper's headline claim.",
+          "start": 133.297,
+          "end": 139.868
+        }
+      ],
+      "chapter": 4,
+      "start": 122.783,
+      "end": 140.448
+    },
+    {
+      "id": 19,
+      "kind": "aside",
+      "text": "Table 1 is the comparison. The authors' model has only about four hundred thousand parameters, yet it scores eighty-eight and a half percent accuracy. The two baselines are far bigger, five million and twelve million parameters, and score about eighty-one and eighty-four percent. So the smallest model is also the most accurate, by roughly four and a half points.",
+      "style": "stress the result",
+      "source": [
+        "p2-b4"
+      ],
+      "anchors": [
+        {
+          "page": 1,
+          "bbox": [
+            72.0,
+            330.5,
+            540.0,
+            421.5
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Table 1 is the comparison.",
+          "start": 140.448,
+          "end": 142.389
+        },
+        {
+          "text": "The authors' model has only about four hundred thousand parameters, yet it scores eighty-eight and a half percent accuracy.",
+          "start": 142.569,
+          "end": 149.609
+        },
+        {
+          "text": "The two baselines are far bigger, five million and twelve million parameters, and score about eighty-one and eighty-four percent.",
+          "start": 149.789,
+          "end": 157.405
+        },
+        {
+          "text": "So the smallest model is also the most accurate, by roughly four and a half points.",
+          "start": 157.585,
+          "end": 162.257
+        }
+      ],
+      "chapter": 4,
+      "start": 140.448,
+      "end": 162.837
+    },
+    {
+      "id": 20,
+      "kind": "read",
+      "text": "The training loop is short:",
+      "style": "",
+      "source": [
+        "p2-b5"
+      ],
+      "anchors": [
+        {
+          "page": 1,
+          "bbox": [
+            72.0,
+            431.5,
+            181.1,
+            445.5
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "The training loop is short:",
+          "start": 162.837,
+          "end": 164.267
+        }
+      ],
+      "chapter": 4,
+      "start": 162.837,
+      "end": 164.847
+    },
+    {
+      "id": 21,
+      "kind": "aside",
+      "text": "The code runs ten epochs. In each one it goes through the data in batches, computes the loss of the model's predictions, works out the gradients, and takes one optimiser step. It's the standard training loop, nothing unusual.",
+      "style": "quiet aside",
+      "source": [
+        "p2-b6"
+      ],
+      "anchors": [
+        {
+          "page": 1,
+          "bbox": [
+            72.0,
+            456.5,
+            271.8,
+            509.6
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "The code runs ten epochs.",
+          "start": 164.847,
+          "end": 166.361
+        },
+        {
+          "text": "In each one it goes through the data in batches, computes the loss of the model's predictions, works out the gradients, and takes one optimiser step.",
+          "start": 166.541,
+          "end": 175.245
+        },
+        {
+          "text": "It's the standard training loop, nothing unusual.",
+          "start": 175.425,
+          "end": 178.092
+        }
+      ],
+      "chapter": 4,
+      "start": 164.847,
+      "end": 178.672
+    },
+    {
+      "id": 22,
+      "kind": "pause",
+      "text": "",
+      "style": "",
+      "source": [],
+      "anchors": [],
+      "sentences": [],
+      "chapter": 4,
+      "start": 178.672,
+      "end": 179.472
+    },
+    {
+      "id": 23,
+      "kind": "heading",
+      "text": "Section four. Conclusion.",
+      "style": "",
+      "source": [
+        "p2-b7"
+      ],
+      "anchors": [
+        {
+          "page": 1,
+          "bbox": [
+            72.0,
+            523.5,
+            147.1,
+            541.5
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Section four. Conclusion.",
+          "start": 179.472,
+          "end": 181.243
+        }
+      ],
+      "chapter": 5,
+      "start": 179.472,
+      "end": 182.123
+    },
+    {
+      "id": 24,
+      "kind": "read",
+      "text": "A model with 0.4 million parameters beats baselines thirty times its size on this task. Future work will test whether this holds on real data.",
+      "style": "",
+      "source": [
+        "p2-b8"
+      ],
+      "anchors": [
+        {
+          "page": 1,
+          "bbox": [
+            72.0,
+            550.0,
+            531.0,
+            578.7
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "A model with 0.4 million parameters beats baselines thirty times its size on this task.",
+          "start": 182.123,
+          "end": 187.947
+        },
+        {
+          "text": "Future work will test whether this holds on real data.",
+          "start": 188.127,
+          "end": 191.113
+        }
+      ],
+      "chapter": 5,
+      "start": 182.123,
+      "end": 191.693
+    },
+    {
+      "id": 25,
+      "kind": "aside",
+      "text": "The references follow, and I'll skip them.",
+      "style": "quiet aside",
+      "source": [
+        "p2-b9",
+        "p2-b10"
+      ],
+      "anchors": [
+        {
+          "page": 1,
+          "bbox": [
+            72.0,
+            588.9,
+            132.6,
+            606.9
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            72.0,
+            615.4,
+            378.2,
+            652.7
+          ]
+        }
+      ],
+      "sentences": [
+        {
+          "text": "The references follow, and I'll skip them.",
+          "start": 191.693,
+          "end": 193.955
+        }
+      ],
+      "chapter": 5,
+      "start": 191.693,
+      "end": 194.535
+    }
+  ],
+  "duration": 194.535
+}
