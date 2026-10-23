@@ -1,0 +1,33 @@
+{
+  "title": "Tiny Models Learn Fast",
+  "mode": "explain",
+  "_note": "Demo script written by Claude in a coding session, following the narrator prompt in audiobook/narrators/claude.py, because no API key was available in the build environment. Regenerate with: audiobook script samples/sample-paper.pdf --mode explain -o script.json",
+  "segments": [
+    {"kind": "heading", "text": "Tiny Models Learn Fast.", "source": ["p1-b1"], "style": "title", "pause": 0.0},
+    {"kind": "read", "text": "By A. Researcher and B. Scientist.", "source": ["p1-b2"], "style": "", "pause": 0.0},
+    {"kind": "heading", "text": "Abstract.", "source": ["p1-b3"], "style": "", "pause": 0.0},
+    {"kind": "read", "text": "We show that a very small neural network can learn a toy task in a handful of epochs. We describe the model, the loss we minimise, and a comparison against two baselines.", "source": ["p1-b4"], "style": "", "pause": 0.0},
+    {"kind": "pause", "text": "", "source": [], "style": "", "pause": 0.8},
+    {"kind": "heading", "text": "Section one. Introduction.", "source": ["p1-b5"], "style": "", "pause": 0.0},
+    {"kind": "read", "text": "Large models dominate recent work, but small models remain useful on devices with little memory. Prior studies of compact networks focus on image tasks; we study a simple sequence task instead.", "source": ["p1-b6"], "style": "", "pause": 0.0},
+    {"kind": "aside", "text": "There's a footnote here, and it's just a practical note: the code and data are available from the authors on request.", "source": ["p1-b11"], "style": "quiet aside", "pause": 0.0},
+    {"kind": "pause", "text": "", "source": [], "style": "", "pause": 0.8},
+    {"kind": "heading", "text": "Section two. Method.", "source": ["p1-b7"], "style": "", "pause": 0.0},
+    {"kind": "read", "text": "Given inputs x sub i with labels y sub i, the model predicts y hat sub i, and is trained to minimise the cross-entropy loss:", "source": ["p1-b8"], "style": "", "pause": 0.0},
+    {"kind": "read", "text": "L of theta equals minus one over N, times the sum over i of y sub i, times the log of y hat sub i.", "source": ["p1-b9"], "style": "slower, clear", "pause": 0.0},
+    {"kind": "aside", "text": "Let's unpack that. Theta is everything the model can learn, its weights. For each training example, y is the true answer and y hat is the probability the model gave it. Taking the log of that probability and flipping the sign means the loss is small when the model is confident and right, and grows sharply when it's confidently wrong. Dividing by N just averages this over all the examples. So minimising L simply means: push the model to put high probability on the correct answers.", "source": ["p1-b9"], "style": "warm, explanatory", "pause": 0.0},
+    {"kind": "read", "text": "Here theta are the model parameters, and N is the number of training examples. Equation one is minimised with stochastic gradient descent.", "source": ["p1-b10"], "style": "", "pause": 0.0},
+    {"kind": "aside", "text": "Stochastic gradient descent means nudging the weights a little at a time, using small random batches of examples, in whichever direction makes the loss go down.", "source": ["p1-b10"], "style": "quiet aside", "pause": 0.0},
+    {"kind": "pause", "text": "", "source": [], "style": "", "pause": 0.8},
+    {"kind": "heading", "text": "Section three. Results.", "source": ["p2-b1"], "style": "", "pause": 0.0},
+    {"kind": "read", "text": "Figure 1 shows the training loss. Table 1 compares our model against two baselines.", "source": ["p2-b2"], "style": "", "pause": 0.0},
+    {"kind": "aside", "text": "In Figure 1, the loss is on the vertical axis and training epochs run left to right. The curve drops steeply over the first few epochs, then levels off into a near-flat line. In other words, the model learns almost everything it's going to learn very early, which is the paper's headline claim.", "source": ["p2-b3"], "style": "curious, descriptive", "pause": 0.0},
+    {"kind": "aside", "text": "Table 1 is the comparison. The authors' model has only about four hundred thousand parameters, yet it scores eighty-eight and a half percent accuracy. The two baselines are far bigger, five million and twelve million parameters, and score about eighty-one and eighty-four percent. So the smallest model is also the most accurate, by roughly four and a half points.", "source": ["p2-b4"], "style": "stress the result", "pause": 0.0},
+    {"kind": "read", "text": "The training loop is short:", "source": ["p2-b5"], "style": "", "pause": 0.0},
+    {"kind": "aside", "text": "The code runs ten epochs. In each one it goes through the data in batches, computes the loss of the model's predictions, works out the gradients, and takes one optimiser step. It's the standard training loop, nothing unusual.", "source": ["p2-b6"], "style": "quiet aside", "pause": 0.0},
+    {"kind": "pause", "text": "", "source": [], "style": "", "pause": 0.8},
+    {"kind": "heading", "text": "Section four. Conclusion.", "source": ["p2-b7"], "style": "", "pause": 0.0},
+    {"kind": "read", "text": "A model with 0.4 million parameters beats baselines thirty times its size on this task. Future work will test whether this holds on real data.", "source": ["p2-b8"], "style": "", "pause": 0.0},
+    {"kind": "aside", "text": "The references follow, and I'll skip them.", "source": ["p2-b9", "p2-b10"], "style": "quiet aside", "pause": 0.0}
+  ]
+}
